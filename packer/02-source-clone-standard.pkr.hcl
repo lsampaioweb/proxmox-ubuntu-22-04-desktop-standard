@@ -12,6 +12,7 @@ source "proxmox-clone" "template" {
   vm_name              = "${var.vm_name}"
   pool                 = "${var.pool}"
   onboot               = "${var.onboot}"
+  task_timeout         = "${var.task_timeout}"
   template_description = "${var.template_description}"
 
   # Clone

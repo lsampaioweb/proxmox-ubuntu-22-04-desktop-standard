@@ -26,6 +26,12 @@ variable "onboot" {
   default     = false
 }
 
+variable "task_timeout" {
+  description = "The timeout for Promox API operations, e.g. clones. Defaults to 1 minute."
+  type        = string
+  default     = "10m"
+}
+
 variable "template_description" {
   description = "Description of the template, visible in the Proxmox interface."
   type        = string
