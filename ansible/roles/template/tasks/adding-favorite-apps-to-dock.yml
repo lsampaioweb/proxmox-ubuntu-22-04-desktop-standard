@@ -1,0 +1,19 @@
+---
+- name: "Creating the list of favorite applications"
+  ansible.builtin.set_fact:
+    favorite_applications:
+      - 'org.gnome.Nautilus.desktop'
+      - 'google-chrome.desktop'
+      - 'code_code.desktop'
+      - 'org.gnome.Terminal.desktop'
+      - 'postman_postman.desktop'
+      - 'gnome-system-monitor.desktop'
+      - 'gnome-control-center.desktop'
+      - 'org.gnome.seahorse.Application.desktop'
+
+- name: "Adding the favorite applications in the Dock"
+  become: false
+  community.general.dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    value: "{{ favorite_applications | string }}"
+    state: "present"

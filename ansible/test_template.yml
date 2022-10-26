@@ -1,0 +1,7 @@
+---
+- name: "Preparing the template with the minimum settings"
+  hosts: "packer"
+  become: true
+
+  roles:
+    - "template"

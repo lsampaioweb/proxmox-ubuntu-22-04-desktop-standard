@@ -1,0 +1,6 @@
+[packer]
+template ansible_host=<ip>
+
+[packer:vars]
+ansible_user=packer
+ansible_password=<password>

@@ -1,0 +1,57 @@
+---
+- name: "Upgrading full distro packages"
+  ansible.builtin.apt:
+    update_cache: true
+    upgrade: "dist"
+
+- name: "Installing required packages"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/apt.yml"
+  vars:
+    packages:
+      - {name: "ethtool"} # To enable Wake-on-Lan.
+      - {name: "traceroute"} # It helps debug network problems.
+      - {name: "whois"} # To enable mkpasswd command.
+      - {name: "net-tools"} # A collection of programs that form the base set of the NET-3 networking.
+      - {name: "curl"} # Transfer a URL.
+      - {name: "tree"} # List contents of directories in a tree-like format.
+      - {name: "fail2ban"} # Is an intrusion prevention software framework.
+      - {name: "xrdp"} # To enable Microsoft Remote Connection.
+      - {name: "nikto"} # To run vulnerabilidade scans.
+      - {name: "chrome-gnome-shell"} # To enable Microsoft Remote Connection multiple logins.
+      - {name: "git"}
+
+- name: "Installing pip packages"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/pip.yml"
+  vars:
+    packages:
+      - {name: "ansible"}
+      - {name: "ansible-lint"}
+      - {name: "psutil"} # Required for the community.general.dconf module.
+
+- name: "Installing snap packages"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/snap.yml"
+  vars:
+    packages:
+      - {name: "code", classic: "yes"}
+      - {name: "postman"}
+
+- name: "Setting up the XRDP package"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/xrdp.yml"
+
+- name: "Setting up the Google packages"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/google-chrome.yml"
+
+- name: "Setting up VSCode application"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/vscode.yml"
+
+- name: "Setting up the HashiCorp packages"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/hashicorp.yml"
+
+- name: "Setting up the Git package"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/git.yml"
+  vars:
+    config:
+      - {scope: "global", name: "user.name", value: "{{ git_user_name | b64decode }}"}
+      - {scope: "global", name: "user.email", value: "{{ git_user_email | b64decode }}"}
+      - {scope: "global", name: "pull.rebase", value: "false"}
+      - {scope: "global", name: "init.defaultBranch", value: "main"}
