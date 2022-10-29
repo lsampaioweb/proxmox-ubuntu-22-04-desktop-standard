@@ -7,6 +7,7 @@ Run these commands on the Proxmox node (just once and on any node):
   pveum user add packer@pve --firstname "Packer" --email "lsampaioweb@gmail.com" --comment "The user that Packer will use."
 
 02 - Create a password for the user.
+  uuid
   pveum passwd packer@pve
 
 03 - Create a token for the user.
