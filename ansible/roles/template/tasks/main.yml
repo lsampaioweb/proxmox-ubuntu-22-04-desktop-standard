@@ -21,4 +21,4 @@
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/machine-id.yml"
 
 - name: "Removing unnecessary files, folders and configuration"
-  ansible.builtin.import_tasks: "clean-up.yml"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/clean-up.yml"
