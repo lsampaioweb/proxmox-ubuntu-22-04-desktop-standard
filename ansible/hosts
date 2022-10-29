@@ -2,5 +2,5 @@
 template ansible_host=<ip>
 
 [packer:vars]
-ansible_user=packer
+ansible_user=usr_ansible
 ansible_password=<password>
