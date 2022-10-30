@@ -1,3 +1,6 @@
 [submodule "ansible/roles/common"]
 	path = ansible/roles/common
 	url = https://github.com/lsampaioweb/ansible-common-tasks.git
+[submodule "terraform/modules/proxmox-ubuntu-22-04"]
+	path = terraform/modules/proxmox-ubuntu-22-04
+	url = https://github.com/lsampaioweb/terraform-proxmox-ubuntu-22-04-module.git
