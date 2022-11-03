@@ -3,5 +3,6 @@
 git_user_name: "THVjaWFubyBTYW1wYWlv"
 git_user_email: "bHNhbXBhaW93ZWJAZ21haWwuY29t"
 
-# Path of the CA Certificate.
-certificate_authority_path: "/usr/local/share/ca-certificates/certificate.authority.crt"
+nssdb_path: "etc/pki/nssdb"
+nssdb_certificates:
+  - {trust: "C,,", name: "HomeLab-Certificate-Authority", path: "/usr/local/share/ca-certificates/certificate.authority.crt"}

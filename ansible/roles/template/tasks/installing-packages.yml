@@ -55,3 +55,6 @@
       - {scope: "global", name: "user.email", value: "{{ git_user_email | b64decode }}"}
       - {scope: "global", name: "pull.rebase", value: "false"}
       - {scope: "global", name: "init.defaultBranch", value: "main"}
+
+- name: "Installing the CA Certificate in the shared nssdb database"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/nssdb.yml"
