@@ -1,10 +1,6 @@
 ---
 - name: "Changing the hostname"
-  delegate_to: "{{ host }}"
-  become: true
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/hostname.yml"
 
 - name: "Installing required packages"
-  delegate_to: "{{ host }}"
-  become: true
   ansible.builtin.import_tasks: "installing-packages.yml"
