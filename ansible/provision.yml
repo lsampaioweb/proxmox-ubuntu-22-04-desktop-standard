@@ -1,6 +1,0 @@
----
-- name: "Preparing the virtual machine with some settings"
-  hosts: "localhost"
-
-  roles:
-    - "provision"

@@ -4,7 +4,6 @@ Project with Ansible scripts to create an Ubuntu Desktop template on Proxmox fro
 Run the command in the terminal:
 ```bash
   ansible-playbook template.yml
-  ansible-playbook provision.yml
 ```
 
 # Created by: 
