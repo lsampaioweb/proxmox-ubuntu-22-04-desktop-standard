@@ -44,17 +44,17 @@
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/snap.yml"
   vars:
     packages:
-      - {name: "code", classic: "yes"}
       - {name: "postman"}
-
-- name: "Setting up VSCode application"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/vscode.yml"
+      - {name: "code", classic: "yes"}
 
 - name: "Setting up the Google packages"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/google-chrome.yml"
 
 - name: "Installing the CA Certificate in the shared nssdb database"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/nssdb.yml"
+
+- name: "Setting up VSCode application"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/vscode.yml"
 
 - name: "Setting up the XRDP package"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/xrdp.yml"
