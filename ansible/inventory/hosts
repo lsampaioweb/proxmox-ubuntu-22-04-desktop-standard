@@ -1,4 +1,4 @@
-[JumpServer]
+[ControlMachine]
 localhost ansible_connection=local
 
 [target]
