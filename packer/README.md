@@ -5,7 +5,7 @@ Run these commands on the computer that is running Packer:
 
 ```bash
   cd packer
-  ./pipeline.sh
+  ./pkr.sh build staging
 ```
 
 # Created by: 
