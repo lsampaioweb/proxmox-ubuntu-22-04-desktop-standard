@@ -15,3 +15,5 @@ packer fmt -recursive .
 packer $1 -only="credencials.null.password" -var-file=$2/vars.pkrvars.hcl clone/. 
 
 packer $1 -only="ubuntu.proxmox-clone.template" -var-file=$2/vars.pkrvars.hcl clone/. 
+
+packer $1 -only="kvm-node.null.extra-config" -var-file=$2/vars.pkrvars.hcl clone/. 
