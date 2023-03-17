@@ -3,7 +3,8 @@ Project with Ansible scripts to create an Ubuntu Desktop template on Proxmox fro
 
 Run the command in the terminal:
 ```bash
-  ansible-playbook template.yml
+  ansible-playbook template.yml hostname=ubuntu-22-04-desktop-standard
+  ansible-playbook kvm_setup.yml -e "node=kvm-07 vm_id=905 hotplug=disk,network,cpu storage_pool=Ceph_Silver"
 ```
 
 # Created by: 
