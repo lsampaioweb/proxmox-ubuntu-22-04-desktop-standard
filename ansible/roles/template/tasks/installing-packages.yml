@@ -7,22 +7,22 @@
     packages:
       - {name: "sshpass"} # noninteractive ssh password provider.
       - {name: "libsecret-tools"} # Store and retrieve passwords.
-      - {name: "ethtool"} # To enable Wake-on-Lan.
-      - {name: "curl"} # Transfer a URL.
       - {name: "traceroute"} # It helps debug network problems.
       - {name: "whois"} # To enable mkpasswd command.
       - {name: "net-tools"} # A collection of programs that form the base set of the NET-3 networking.
       - {name: "tree"} # List contents of directories in a tree-like format.
       - {name: "uuid"} # Universally Unique Identifier Command-Line Tool.
-      - {name: "ufw"} # A program for managing the firewall for the VM.
       - {name: "fail2ban"} # Is an intrusion prevention software framework.
       - {name: "nikto"} # To run vulnerabilidade scans.
       - {name: "xrdp"} # To enable Microsoft Remote Connection.
       - {name: "chrome-gnome-shell"} # To enable Microsoft Remote Connection multiple logins.
       - {name: "xclip"} # Copy to clipboard.
       - {name: "dbus-x11"} # Required for the community.general.dconf module.
+      - {name: "ethtool"} # To enable Wake-on-Lan.
+      - {name: "curl"} # Transfer a URL.
       - {name: "rsyslog"}
       - {name: "git"}
+      - {name: "ufw"} # A program for managing the firewall for the VM.
 
 - name: "Installing pip packages"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/pip.yml"
