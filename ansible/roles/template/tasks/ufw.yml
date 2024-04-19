@@ -1,0 +1,27 @@
+---
+- name: "Setting up IPV4 as the default rule"
+  ansible.builtin.lineinfile:
+    path: "/etc/default/ufw"
+    regexp: "IPV6="
+    line: "IPV6=no"
+    state: "present"
+
+- name: "Ensure the ufw.log file exists"
+  ansible.builtin.file:
+    path: "/var/log/ufw.log"
+    state: "touch"
+    owner: "syslog"
+    group: "syslog"
+    mode: "0664"
+
+- name: "Adding UFW rules"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ufw.yml"
+  vars:
+    rules:
+      - {rule: "allow", name: "OpenSSH", comment: "Allow OpenSSH for All"}
+      - {rule: "allow", proto: "tcp", to_port: "3389", comment: "Allow remote desktop connections from all internal networks"}
+
+- name: "Setting DENY as the default policy and enabling the UFW"
+  community.general.ufw:
+    policy: "deny"
+    state: "enabled"

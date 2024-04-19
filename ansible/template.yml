@@ -1,6 +1,7 @@
 ---
-- name: "Preparing the template with the minimum settings"
+- name: "Preparing the template with the standard settings"
   hosts: "default"
+  # hosts: "host"
   become: true
 
   roles:

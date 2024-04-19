@@ -6,10 +6,20 @@
 
 ## 2. Install required packages.
 
-## 3. Remove unnecessary files, folders and configuration.
+## 3. Setup the firewall UFW.
 
-## 4. Recreate the machine-id file so the new VM can get a new IP.
+## 4. Setup the fail2ban application.
 
-# Created by: 
+## 5. Remove unnecessary packages.
+
+## 6. Add the favorite applications in the Dock.
+
+## 7. Setup the dark theme.
+
+## 8. Recreate the machine-id file so the new VM can get a new IP.
+
+## 9. Remove unnecessary files, folders and configuration.
+
+# Created by:
 
 1. Luciano Sampaio.

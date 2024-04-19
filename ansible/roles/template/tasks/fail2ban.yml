@@ -1,0 +1,6 @@
+---
+- name: "Adding Fail2ban rules"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/fail2ban.yml"
+  vars:
+    rules:
+      - {src: "fail2ban-ssh.conf", dest: "/etc/fail2ban/jail.d/ssh.conf"}
