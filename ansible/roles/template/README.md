@@ -12,13 +12,9 @@
 
 ## 5. Remove unnecessary packages.
 
-## 6. Add the favorite applications in the Dock.
+## 6. Recreate the machine-id file so the new VM can get a new IP.
 
-## 7. Setup the dark theme.
-
-## 8. Recreate the machine-id file so the new VM can get a new IP.
-
-## 9. Remove unnecessary files, folders and configuration.
+## 7. Remove unnecessary files, folders and configuration.
 
 # Created by:
 
