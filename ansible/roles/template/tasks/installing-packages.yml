@@ -23,6 +23,7 @@
       - {name: "rsyslog"}
       - {name: "git"}
       - {name: "ufw"} # A program for managing the firewall for the VM.
+      - {name: "gnupg2"} # To use GPG.
 
 - name: "Installing pip packages"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/pip.yml"
