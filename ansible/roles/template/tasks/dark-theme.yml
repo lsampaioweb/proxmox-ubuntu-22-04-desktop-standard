@@ -1,7 +1,0 @@
----
-- name: "Setting the dark theme"
-  become: false
-  community.general.dconf:
-    key: "/org/gnome/desktop/interface/color-scheme"
-    value: "'prefer-dark'"
-    state: "present"
