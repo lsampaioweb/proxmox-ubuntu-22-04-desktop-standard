@@ -1,9 +1,0 @@
----
-# The git config for my user. String was encoded on base64 to avoid spammers.
-git_user_name: "THVjaWFubyBTYW1wYWlv"
-git_user_email: "bHNhbXBhaW93ZWJAZ21haWwuY29t"
-
-# For Google Chrome to trust our Certificate Authority.
-nssdb_path: "etc/pki/nssdb"
-nssdb_certificates:
-  - {trust: "C,,", name: "HomeLab-Certificate-Authority", path: "/usr/local/share/ca-certificates/certificate.authority.crt"}
