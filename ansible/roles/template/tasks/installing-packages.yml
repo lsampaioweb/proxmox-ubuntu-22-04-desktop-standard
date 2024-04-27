@@ -40,15 +40,6 @@
   loop:
     - "community.general" # To work with dconf.
 
-- name: "Setting up Git"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/git.yml"
-  vars:
-    config:
-      - {scope: "global", name: "user.name", value: "{{ git_user_name | b64decode }}"}
-      - {scope: "global", name: "user.email", value: "{{ git_user_email | b64decode }}"}
-      - {scope: "global", name: "pull.rebase", value: "false"}
-      - {scope: "global", name: "init.defaultBranch", value: "main"}
-
 - name: "Setting up XClip"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/xclip.yml"
 
@@ -57,25 +48,6 @@
 
 - name: "Setting up VSCode"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/vscode.yml"
-  vars:
-    extentions:
-      - {name: "redhat.ansible"}
-      - {name: "redhat.vscode-yaml"}
-      - {name: "redhat.vscode-xml"}
-      - {name: "vscode-icons-team.vscode-icons"}
-      - {name: "ms-vscode-remote.remote-ssh"}
-      - {name: "4ops.packer"}
-      - {name: "hashicorp.hcl"}
-      - {name: "HashiCorp.terraform"}
-      - {name: "wholroyd.jinja"}
-      - {name: "tomoki1207.pdf"}
-      - {name: "eamodio.gitlens"}
-      - {name: "humao.rest-client"}
-      - {name: "dbaeumer.vscode-eslint"}
-      - {name: "vscjava.vscode-java-pack"}
-      - {name: "vscjava.vscode-spring-initializr"}
-      - {name: "vscjava.vscode-spring-boot-dashboard"}
-      - {name: "vmware.vscode-spring-boot"}
 
 - name: "Setting up HashiCorp packages"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/hashicorp.yml"
