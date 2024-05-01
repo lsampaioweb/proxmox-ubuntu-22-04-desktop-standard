@@ -6,7 +6,7 @@ Project with Packer and Ansible scripts to create an Ubuntu Desktop template on 
 
 [Ansible](ansible/ "Ansible")
 
-# Links:
+### Links:
 
 [Links](links.md "Links")
 
@@ -14,6 +14,6 @@ Project with Packer and Ansible scripts to create an Ubuntu Desktop template on 
 
 [MIT](LICENSE "MIT License")
 
-# Created by: 
+# Created by:
 
 1. Luciano Sampaio.
