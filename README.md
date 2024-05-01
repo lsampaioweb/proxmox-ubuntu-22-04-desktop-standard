@@ -1,19 +1,23 @@
 # proxmox-ubuntu-22-04-desktop-standard
 Project with Packer and Ansible scripts to create an Ubuntu Desktop template on Proxmox from a cloned virtual machine with the default packages and updates.
 
-# Scripts:
+#
+### Scripts:
 [Packer](packer/ "Packer")
 
 [Ansible](ansible/ "Ansible")
 
+#
 ### Links:
 
 [Links](links.md "Links")
 
-# License:
+#
+### License:
 
 [MIT](LICENSE "MIT License")
 
-# Created by:
+#
+### Created by:
 
 1. Luciano Sampaio.
