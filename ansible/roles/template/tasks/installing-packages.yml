@@ -33,6 +33,7 @@
       - {name: "ansible-lint"}
       - {name: "psutil"} # Required for the community.general.dconf module.
       - {name: "passlib"} # Required to use bcrypt.
+      - {name: "jmespath"} # Required to use json_query.
 
 - name: "Installing all the required collections"
   community.general.ansible_galaxy_install:
