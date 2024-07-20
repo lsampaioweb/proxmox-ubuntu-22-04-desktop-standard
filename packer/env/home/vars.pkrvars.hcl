@@ -1,4 +1,4 @@
-proxmox_url = "https://edge-pve-01.homelab:8006/api2/json"
+proxmox_url = "https://edge-pve-01.lan.homelab:8006/api2/json"
 node        = "edge-pve-02"
 
 clone_vm = "ubuntu-22-04-desktop-raw"
