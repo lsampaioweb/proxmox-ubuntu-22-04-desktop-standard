@@ -26,8 +26,9 @@ Run these commands to execute Packer:
 #   $3 -> abort, ask, run-cleanup-provisioner or cleanup.
 #   $4 -> debug.
 #   e.g:
-#   ./pkr.sh validate home ask debug
-  ./pkr.sh validate home ask debug
+# ./pkr.sh validate home
+# ./pkr.sh build home ask debug
+  ./pkr.sh build home
 ```
 
 #
