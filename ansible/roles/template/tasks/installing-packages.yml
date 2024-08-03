@@ -24,23 +24,10 @@
       - {name: "git"}
       - {name: "ufw"} # A program for managing the firewall for the VM.
       - {name: "gnupg2"} # To use GPG.
-
-- name: "Installing pip packages"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/pip.yml"
-  vars:
-    packages:
-      - {name: "ansible"}
-      - {name: "ansible-lint"}
-      - {name: "psutil"} # Required for the community.general.dconf module.
-      - {name: "passlib"} # Required to use bcrypt.
-      - {name: "jmespath"} # Required to use json_query.
-
-- name: "Installing all the required collections"
-  community.general.ansible_galaxy_install:
-    type: "collection"
-    name: "{{ item }}"
-  loop:
-    - "community.general" # To work with dconf.
+      - {name: "pipx"}
+      - {name: "python3-psutil"} # Required for the community.general.dconf module.
+      - {name: "python3-passlib"} # Required to use bcrypt.
+      - {name: "python3-jmespath"} # Required to use bcrypt.
 
 - name: "Setting up XClip"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/xclip.yml"
