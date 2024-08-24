@@ -1,7 +1,7 @@
 ---
 - name: "Preparing the template with the standard settings"
   hosts: "default"
-  # hosts: "host"
+  # hosts: "testing"
   become: true
 
   roles:
