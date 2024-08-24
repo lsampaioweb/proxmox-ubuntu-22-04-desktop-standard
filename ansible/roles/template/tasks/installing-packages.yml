@@ -41,5 +41,8 @@
 - name: "Setting up HashiCorp packages"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/hashicorp.yml"
 
+- name: "Setting up the Docker"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/docker.yml"
+
 - name: "Setting up XRDP"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/xrdp.yml"
