@@ -5,29 +5,30 @@
     update_cache: true
     upgrade: "safe"
     packages:
-      - {name: "sshpass"} # noninteractive ssh password provider.
-      - {name: "libsecret-tools"} # Store and retrieve passwords.
-      - {name: "traceroute"} # It helps debug network problems.
-      - {name: "whois"} # To enable mkpasswd command.
-      - {name: "net-tools"} # A collection of programs that form the base set of the NET-3 networking.
-      - {name: "tree"} # List contents of directories in a tree-like format.
-      - {name: "uuid"} # Universally Unique Identifier Command-Line Tool.
-      - {name: "fail2ban"} # Is an intrusion prevention software framework.
-      - {name: "nikto"} # To run vulnerabilidade scans.
-      - {name: "xrdp"} # To enable Microsoft Remote Connection.
-      - {name: "chrome-gnome-shell"} # To enable Microsoft Remote Connection multiple logins.
-      - {name: "xclip"} # Copy to clipboard.
-      - {name: "dbus-x11"} # Required for the community.general.dconf module.
-      - {name: "ethtool"} # To enable Wake-on-Lan.
-      - {name: "curl"} # Transfer a URL.
-      - {name: "rsyslog"}
-      - {name: "git"}
-      - {name: "ufw"} # A program for managing the firewall for the VM.
-      - {name: "gnupg2"} # To use GPG.
-      - {name: "pipx"}
-      - {name: "python3-psutil"} # Required for the community.general.dconf module.
-      - {name: "python3-passlib"} # Required to use bcrypt.
-      - {name: "python3-jmespath"} # Required to use bcrypt.
+      - {name: "sshpass"} # Provides non-interactive SSH password entry.
+      - {name: "libsecret-tools"} # Utility for storing and retrieving passwords securely.
+      - {name: "git"} # Version control system for tracking changes in source code.
+      - {name: "traceroute"} # Utility for diagnosing network routing issues.
+      - {name: "whois"} # Command-line tool to retrieve information about domain names and IP addresses.
+      - {name: "net-tools"} # Collection of networking utilities, including ifconfig and netstat.
+      - {name: "tree"} # Displays directory contents in a tree-like format.
+      - {name: "uuid"} # Tool for generating and working with Universally Unique Identifiers (UUIDs).
+      - {name: "fail2ban"} # Intrusion prevention software that helps protect against brute-force attacks.
+      - {name: "nikto"} # Web server scanner for detecting vulnerabilities.
+      - {name: "xrdp"} # Allows for remote desktop connections using the Microsoft Remote Desktop Protocol.
+      - {name: "chrome-gnome-shell"} # Extension to enable GNOME Shell integration for Chrome.
+      - {name: "xclip"} # Command-line tool to access the X clipboard.
+      - {name: "dbus-x11"} # Provides D-Bus support for X applications; required by the community.general.dconf module.
+      - {name: "ethtool"} # Tool for managing network device settings, including Wake-on-LAN.
+      - {name: "curl"} # Command-line tool for transferring data with URLs.
+      - {name: "rsyslog"} # Provides system logging service.
+      - {name: "ufw"} # Uncomplicated Firewall for managing firewall rules.
+      - {name: "gnupg2"} # Tool for encryption and signing using GPG (GNU Privacy Guard).
+      - {name: "pipx"} # Tool for installing and running Python applications in isolated environments.
+      - {name: "python3-psutil"} # Provides an interface for retrieving system and process information; required by community.general.dconf module.
+      - {name: "python3-passlib"} # Password hashing library that supports bcrypt.
+      - {name: "python3-jmespath"} # Library for querying JSON data using JMESPath expressions.
+      - {name: "restic"} # Efficient and secure backup program for managing backups.
 
 - name: "Setting up XClip"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/xclip.yml"
