@@ -4,14 +4,8 @@ localhost ansible_connection=local
 [home]
 edge-pve-[01:02]
 
-[home:vars]
-ansible_python_interpreter=/usr/bin/python3
-
 [homelab]
 pve-[01:07]
-
-[homelab:vars]
-ansible_python_interpreter=/usr/bin/python3
 
 [testing]
 # For testing
