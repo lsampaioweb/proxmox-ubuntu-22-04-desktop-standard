@@ -3,9 +3,9 @@ Project with Packer and Ansible scripts to create an Ubuntu Desktop template on 
 
 #
 ### Scripts:
-[Packer](packer/ "Packer")
+[Packer](packer/README.md "Packer")
 
-[Ansible](ansible/ "Ansible")
+[Ansible](ansible/README.md "Ansible")
 
 #
 ### Links:
