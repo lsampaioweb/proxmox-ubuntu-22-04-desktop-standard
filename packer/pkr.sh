@@ -37,4 +37,4 @@ PACKER_LOG=$debug packer $action $errorAction -only="credentials.null.password" 
 
 PACKER_LOG=$debug packer $action $errorAction -only="ubuntu.proxmox-clone.template" -var-file=env/$environment/vars.pkrvars.hcl clone/.
 
-PACKER_LOG=$debug packer $action $errorAction -only="kvm-node.null.extra-config" -var-file=env/$environment/vars.pkrvars.hcl clone/.
+PACKER_LOG=$debug packer $action $errorAction -only="post-config.null.extra-config" -var-file=env/$environment/vars.pkrvars.hcl clone/.
