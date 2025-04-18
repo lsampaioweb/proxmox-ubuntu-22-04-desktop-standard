@@ -29,6 +29,7 @@ Run these commands to execute Packer:
 # ./pkr.sh validate home
 # ./pkr.sh build home ask debug
   ./pkr.sh build home
+  ./pkr.sh build homelab
 ```
 
 #
