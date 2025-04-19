@@ -7,7 +7,6 @@
     packages:
       # Desktop Essentials - Core packages for desktop functionality and remote access.
       - {name: "xrdp"} # Allows remote desktop connections using Microsoft RDP.
-      - {name: "xrdp-xorgxrdp"} # Backend for XRDP to enable clipboard sharing and session management.
       - {name: "libvirglrenderer1"} # Enables virtio-gl GPU acceleration.
       - {name: "dbus-x11"} # D-Bus support for X applications; required by community.general.dconf.
       - {name: "xclip"} # Accesses the X clipboard from the command line.
