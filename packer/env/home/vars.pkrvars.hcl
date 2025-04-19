@@ -5,7 +5,7 @@ proxmox_url = "https://edge-pve-01.lan.homelab:8006/api2/json"
 clone_vm = "ubuntu-24-04-desktop-raw"
 
 # General
-node                 = "edge-pve-01"
+node                 = "edge-pve-02"
 vm_id                = 931
 vm_name              = "ubuntu-24-04-desktop-standard"
 pool                 = "Template"
