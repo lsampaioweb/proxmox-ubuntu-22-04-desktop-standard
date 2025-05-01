@@ -18,4 +18,3 @@ crash.log
 *.terraform*
 *.tfstate*
 .vscode/
-.vscode/
