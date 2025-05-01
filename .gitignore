@@ -17,3 +17,5 @@ crash.log
 # Terraform hidden files should not be committed to Git.
 *.terraform*
 *.tfstate*
+.vscode/
+.vscode/
