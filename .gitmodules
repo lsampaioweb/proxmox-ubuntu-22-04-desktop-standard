@@ -3,7 +3,7 @@
 	url = https://github.com/lsampaioweb/ansible-common-tasks.git
 [submodule "packer/clone"]
 	path = packer/clone
-	url = https://github.com/lsampaioweb/packer-proxmox-ubuntu-22-04-clone.git
+	url = https://github.com/lsampaioweb/packer-proxmox-ubuntu-clone.git
 [submodule "ansible/roles/kvm_setup"]
 	path = ansible/roles/kvm_setup
 	url = https://github.com/lsampaioweb/ansible-kvm-cloud-init.git
